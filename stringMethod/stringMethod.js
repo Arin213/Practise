@@ -77,3 +77,15 @@ console.log(text.slice(-20, -23)); // empty string
 console.log(text.slice(-20, -24)); // empty string  
 console.log(text.slice(-20, -25)); // empty string
 console.log(text.slice(-20, -26)); // empty string
+
+//substring
+console.log(text.substring(0, 5)); //HELLO
+console.log(text.substring(6)); //WORLD
+console.log(text.substring(6, 11)); //WORLD
+console.log(text.substring(-5)); //HELLO WORLD
+
+// replace
+console.log(text.replace("HELLO", "HI")); //HI WORLD
+console.log(text.replace("WORLD", "EVERYONE")); //HELLO EVERYONE
+console.log(text.replace("WORLD", "EVERYONE")); //HELLO EVERYONE
+
