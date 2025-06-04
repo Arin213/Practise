@@ -31,4 +31,49 @@ dive to examples
 */ 
 // legnth
 let text = "HELLO WORLD";
-console.log(text.length);
+console.log(text.length); //12
+
+// charAt
+console.log(text.charAt(2)); //L
+console.log(text.charAt(20)); // empty string
+console.log(text.charAt(-2)); // empty string
+
+// charCodeAt
+console.log(text.charCodeAt(2)); //76
+console.log(text.charCodeAt(20)); // NaN    
+console.log(text.charCodeAt(-2)); // NaN
+
+// at
+console.log(text.at(2)); //L
+console.log(text.at(20)); // undefined
+console.log(text.at(-2)); //R
+// at() vs charAt()
+console.log(text.at(0)); //H
+console.log(text.charAt(0)); //H
+console.log(text.at(-1)); //D
+console.log(text.charAt(-1)); // empty string
+// index
+console.log(text[2]); //L
+console.log(text[20]); // undefined 
+console.log(text[-2]); // undefined
+// text[0] = "A"; // Gives no error, but does not work
+// text[0] = "A"; // Gives no error, but does not work
+// console.log(text); // HELLO WORLD
+// Extracting String Parts
+console.log(text.slice(0, 5)); //HELLO
+console.log(text.slice(6)); //WORLD         
+console.log(text.slice(6, 11)); //WORLD
+console.log(text.slice(-5)); //WORLD            
+console.log(text.slice(-5, -1)); //WORL
+console.log(text.slice(0, -1)); //HELLO WORL
+console.log(text.slice(0, 20)); //HELLO WORLD
+console.log(text.slice(20)); // empty string
+console.log(text.slice(-20)); //HELLO WORLD     
+console.log(text.slice(-20, -1)); //HELLO WORL
+console.log(text.slice(-20, -20)); // empty string
+console.log(text.slice(-20, -21)); // empty string
+console.log(text.slice(-20, -22)); // empty string
+console.log(text.slice(-20, -23)); // empty string
+console.log(text.slice(-20, -24)); // empty string  
+console.log(text.slice(-20, -25)); // empty string
+console.log(text.slice(-20, -26)); // empty string
