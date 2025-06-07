@@ -82,7 +82,7 @@ for (let char of message) {
 
 
 // COMPARISON OF BOOLEAN VALUES
-// NOT INCLUDING ALL COMPARISON BECAUSE, HAVE LEARNT IN JAVA AND PYTHON SO ONLY
+// NOT INCLUDING ALL COMPARISON BECAUSE, HAVE LEARNT IN JAVA AND PYTHON SO ONLY ! but not
 // INCLUDING ONLY ! AND !!
 
 //  ok ! -> this will inverts the boolea value for eg:
@@ -112,7 +112,7 @@ Feature	                undefined	                                        null
 Meaning	        A variable was declared but not assigned	A variable is intentionally set to "no value"
 Set by	        JavaScript (automatically)	                You (the developer)
 Type	        "undefined" (its own type)	                "object" (weird legacy bug in JS)
-Example	        let a; console.log(a); //                   undefined	let b = null; console.log(b); // null
+Example	        let a; console.log(a); //undefined	        let b = null; console.log(b); // null
 
 
 */
