@@ -46,7 +46,7 @@ console.log(text.charCodeAt(-2)); // NaN
 // at
 console.log(text.at(2)); //L
 console.log(text.at(20)); // undefined
-console.log(text.at(-2)); //R
+console.log(text.at(-2)); //L
 // at() vs charAt()
 console.log(text.at(0)); //H
 console.log(text.charAt(0)); //H
