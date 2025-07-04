@@ -569,3 +569,16 @@ console.log(Array.isArray([])); // true
     Array.isArray(value); //true if value is array
 */ 
 
+// function declaration way
+function isOdd(num) {
+  return num % 2 !== 0;
+}
+const arrx = [1, 2, 3, 4, 5];
+const oddNums = arrx.filter(isOdd);
+console.log(oddNums); // Outputs [1, 3, 5];
+// console.log(arr); // Outputs [1, 2, 3, 4, 5], original array is not affected
+
+// arrow function
+
+const oddnumsArrow  = arrx.filter(odd => odd % 2 != 0);
+console.log(oddnumsArrow);
