@@ -1,0 +1,57 @@
+/* body{
+    background-color: antiquewhite;
+
+}
+h1 {
+    background-color: rgb(150, 158, 158);
+    align-items: center;
+}
+.header {
+    color: blue;
+    background-color: yellow;
+}
+
+button {
+    background-color: blue;
+    font-size: medium;
+    color: aliceblue;
+} */
+
+/* .box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 4px;
+    margin: 5px;
+    justify-content: center;
+    font-weight: 600;
+    background-color: antiquewhite;
+} */
+
+/* #box {
+    height: 250px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 4px;
+    margin: 5px;
+    justify-content: center;
+    font-weight: 600;
+    background-color: antiquewhite;
+}
+ */
+
+ .para {
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+ }
+
+ /* this need to be append using js */
+ .newClass {
+    background-color: aquamarine;
+
+ }
