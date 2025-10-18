@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- INLINE EVEN HANDLING
+        Event handling inline in htlm which is not good 
+        instead we use js to event handling.
+    -->
+    <!-- <button onclick="console.log('button was clicked!'); alert('Hello')">Click me</button> -->
+    
+    <!--  this inline won't work because it will be override if the even 
+      is defined in js as well. cause js will override it.-->
+    <button id="btn1" onclick="console.log('button was clicke! as inline event')">Click me</button>
+    
+    <!-- button for 2 times click -->
+    <!-- <button ondblclick="console.log('button was clicked two times!');">Click me two times!</button> -->
+    
+    <!-- mouse hover  to use event to conosle "you are inside the div"-->
+    <!-- <div onmouseover="console.log('you are inside the div');">This is a box</div> -->
+    
+    <!-- create button for toggling -->
+    <button id="mode">Change mode</button>
+    <p>This is paragraph !</p>
+    <div>This is a box</div>
+    <script src="./darkLight.js"></script>
+    <script src="./event.js"></script>
+</body>
+
+</html>

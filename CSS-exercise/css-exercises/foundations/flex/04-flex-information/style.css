@@ -1,0 +1,58 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 32px;
+
+  /*out side the main container and has its own where we add 
+  display:flex, and center the title */
+  display: flex;
+  justify-content: center;
+ 
+}
+
+/*main parent container where display:flex will put the items in row
+and justify-content will labed them in center and text-align will put the
+img and text at center gap is made about 52px*/
+.container {
+  display: flex;
+  justify-content:center;
+  text-align: center;
+  gap:52px;
+
+}
+
+/*text width is about 200px given*/
+.text {
+  /* Won't grow beyond 1200px */
+  /* max-width: 1200px;  */
+
+  /* Won't shrink below 320px */
+  /* min-width: 320px;     */
+  
+  /* max-width: 200px; */
+  width: 200px;
+
+}
+
+/* do not edit this footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}

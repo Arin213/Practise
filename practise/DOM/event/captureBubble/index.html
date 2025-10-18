@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event captureBubble</title>
+    <a href="https://www.javascripttutorial.net/">JS Tutorial</a>
+</head>
+<body>
+    <script>
+        // selection
+        let link = document.querySelector("a");
+
+        // callbackfucntion
+        // function click(){....};
+
+        /*
+            event object to prevent the default behaviour 
+            here we can prevent the button or link or forms submit to stop by 
+            using the event.preventDefault().
+            but the callback function must be with the event object passed or else it won'T work 
+
+        */ 
+        link.addEventListener("click",function(event){
+            console.log("clicked !");
+            // event.preventDefault(); // this will prevent the link opening.
+            event.stopPropagation(); // this will halt the flow of event but won't stop the default behavour of browser
+            
+        });
+
+        /*
+            event will never reach to the body because the click event on button will executed 
+            and clicked will be print but the event.stopPropagation() will halt the further of 
+            event flow. so event will never reaches to documnet.body.addEventListener.
+        */
+        document.body.addEventListener("click", function(event){
+            console.log("the body was clicked!");
+
+        });
+    </script>
+</body>
+</html>

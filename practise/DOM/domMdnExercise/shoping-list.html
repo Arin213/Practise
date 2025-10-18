@@ -1,0 +1,158 @@
+<!-- 
+    1.To start with, download a copy of our shopping-list.html starting file and make a copy of it somewhere. 
+    You'll see that it has some minimal CSS, a div with a label, input, and button, and an empty list and <script> element. 
+    You'll be making all your additions inside the script.
+  
+    2. Create three variables that hold references to the list (<ul>), <input>, and <button> elements.
+  
+    3. Create a function that will run in response to the button being clicked.
+  
+    4. Inside the function body, start off by storing the current value of the input element in a variable.
+    
+    5. Next, empty the input element by setting its value to an empty string — "".
+  
+    6. Create three new elements — a list item (<li>), <span>, and <button>, and store them in variables.
+    
+    7. Append the span and the button as children of the list item.
+
+    8. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
+  
+    9. Append the list item as a child of the list.
+  
+    10. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (<li>...</li>).
+    
+    11. Finally, use the focus() method to focus the input element ready for entering the next shopping list item.
+
+    -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping list example</title>
+  <style>
+    li {
+      margin-bottom: 10px;
+    }
+
+    li button {
+      font-size: 12px;
+      margin-left: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My shopping list</h1>
+
+  <div>
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button>Add item</button>
+  </div>
+
+  <ul>
+
+  </ul>
+
+  <script>
+    // create three variables that hold references:
+    let uList;
+    let input;
+    let button;
+
+    function buttonClicked() {
+      console.log("button was clicked!");
+    }
+
+
+  </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    ul {
+      padding-left: 0;
+    }
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    span {
+      margin-right: 10px;
+    }
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>My shopping list</h1>
+  <div>
+    <label for="item">Enter item:</label>
+    <input type="text" id="item" name="item" />
+    <button id="addButton">Add Item</button>
+  </div>
+  <ul id="shoppingList"></ul>
+
+  <script>
+    // selection of class
+    // Step 2: Get references to DOM elements
+    const list = document.querySelector('#shoppingList');
+    const input = document.querySelector('#item');
+    const addButton = document.querySelector('#addButton');
+
+    // addeventlistener for click
+    // Step 3: Create function that runs on button click
+    addButton.addEventListener('click', function () {
+      // Step 4: Get current input value
+      const itemText = input.value;
+
+      // Step 5: Empty the input field
+      input.value = '';
+
+      // Step 6: Create <li>, <span>, and <button>
+      const listItem = document.createElement('li');
+
+
+      const span = document.createElement('span');
+      const deleteBtn = document.createElement('button');
+
+      // Step 7: Append span and button to the li
+      listItem.appendChild(span);
+      listItem.appendChild(deleteBtn);
+
+      // Step 8: Set span text to input value, and button text to 'Delete'
+      span.textContent = itemText;
+      deleteBtn.textContent = 'Delete';
+
+      // Step 9: Append the li to the list
+      list.appendChild(listItem);
+
+      // Step 10: Delete li when button is clicked
+      deleteBtn.addEventListener('click', function () {
+        list.removeChild(listItem);
+      });
+
+      // Step 11: Focus input for the next item
+      input.focus();
+    });
+  </script>
+</body>
+</html>

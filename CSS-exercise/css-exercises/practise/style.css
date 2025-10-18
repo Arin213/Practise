@@ -1,0 +1,160 @@
+
+.flex-container {
+    display: flex;
+    border: 8px solid black;
+    min-height: 800px; /*let the height must be at least 800px and allows to grow or less unlike height*/
+
+    /* justify-content:  is used to align the flex items 
+    along the main axis either in row or column. */
+
+    /*let the item at beign*/
+    /* justify-content: flex-start; */
+    /*let the item to at end*/
+    /* justify-content: flex-end; */
+    /*let the items to be center*/  
+    /* justify-content: center;  */
+    
+    /* Items are evenly distributed, no space at the start or end. */
+    /* justify-content: space-between;  */
+    /* Items have equal space around them (edges have half the space). */
+    /* justify-content: space-around; */
+    /* Items have equal space on all sides (edges get the same space as between items). */
+    /* justify-content: space-evenly; */
+
+    /*now to center the flex items, we us the property of align-items
+    this align-items control the alignment along the cross axis not main axis where as
+    justify-content work along the main axis*/
+    
+    /*let the items to be in top*/
+    /* align-items: flex-start; */
+    /*let the items to be in bottom*/ 
+    /* align-items: flex-end; */
+     /*let the items to be in center along the cross axis*/ 
+    /* align-items: center;  */
+
+    /*for the align items the aligment works in cross axis so the changes will done in veritical side no horizontal
+    so for the small number items which align in single row no effect can be seen*/
+    /* align-items:stretch; */
+
+    /*flex-direction is another property which will control the direction of 
+    main axis and its default value is row*/
+
+    /*let items to go from left to right*/
+    /* flex-direction: row; */
+    /*let the item to go from right to left and  also the vlaue(order) whole items in right end side */
+    /* flex-direction: row-reverse; */
+
+    /*now the order got flipped we can use the flex-end in justify content
+    to start from left to right but the order would be from 5 to 1*/
+    /* justify-content: flex-end; */
+
+    /*let the items goes from row to coloumn*/
+    /* flex-direction: column; */
+
+    /*since the items goes into column then the main axis would be in column and cross would be in 
+    row so instead of using justify content we can use the align items 
+    since justify-content works from top to bottom of main aixs and if the itmes is in column then 
+    it won't work instead we use the align items*/
+    /* align-items: center; */
+
+    /*gap properties would create gap between the items */
+
+    /*create the gap on each child-items with 10px wide */
+    gap:10px;
+
+    /*let the items to align in next line if the space is not enough*/
+    /* flex-wrap: wrap; */
+
+    /*let the items to aling in single row and if the size decrease the items 
+    would shrink and if the spaces are not enough then there would be overflow*/
+    /* flex-wrap: nowrap; */
+    
+    /*if we want to align items in center or anywhere we can use the learnt property */
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    /*now another property called align-content which can be used only
+    when there are multiple rows and its used to give the spaces for both x and y cases*/
+    /* align-content:center; */
+
+    /*we can also put the gap using row-gap and column-gap*/
+    /* row-gap: 10px;
+    column-gap: 20px;
+     */
+
+    
+
+
+
+}
+
+.box {
+    /*if we want to put the items or numbers at center we can go through all 
+    process using flex-box and its properties but in child-tiems*/
+    
+    /* Now if the flex-wrap is not applied then vh or view port would be automically 
+    resized if the vh is too small and this behavior: can be specified 
+    using flex-shrink: 
+    can it can be applied to items not the main container*/
+    
+    /*this would no longer let to resize so, overflowed the container and also for the cases
+    for every non-flex layout
+    now to prevent the items to get overflowed we can use eithere flex layout
+    like using wrap or flex-shrink to 1 to prevent from overflowing
+    default value of flex-shrink is 1*/
+
+    /* flex-shrink: 1; */
+
+    /*next is flex-grow which let the items size to grow and by default the flex-grow is 0 
+    if we put the vlaue of flex-grow to 1, all the items would filled upt the spaces of container
+    if the spaces are more the size would grow accordingly*/
+
+    /*Now there is another min-width and max-width which puts the limit of how much the items size
+    should grows or shrinks pass passign the vlue to min and max width*/
+
+
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+    /*let the size shrink upto 100px*/
+    min-width: 100px;
+    /*let the size grow upt ot 200px*/
+    /* max-width: 200px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    font-size: 20px;
+}
+/* 
+now we can also use the flex-shrink by targeting the specific element and here
+we can put the flex-shrink to only items numbwe 1 to 0 and the size of 1 would never shrink while other 
+would cause other would have shirnk value 1 unlike 0 for 1 . */
+
+
+
+#box1 {
+    /* flex-shrink: 0; */
+
+    /*we can also use the flex-grow for the sepcific target items where the
+    targeted items will only grow while other won't and fill up the parent sapces*/
+
+    /*also can pass the multiple number which means high number, then would fill the space much faster or reserve than other flex-grow numbers
+    can be applied to flex-shrink also*/
+    
+    
+    /* flex-grow:3; */
+
+    /*align slef will let the specific items to flexable using align-selfs*/
+    /* align-self: center; */
+}
+
+/*well grow upto 200px and shrink upto 100px
+we can combine with media queries to let handle sizes*/
+@media(max-width: 575px){
+    .flex-container {
+        flex-wrap: wrap;
+
+    }
+}
