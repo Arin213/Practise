@@ -1,0 +1,19 @@
+# SSH keys with spaces and special characters
+*-rsa -b*
+*-rsa-b*
+*rsa*b*
+un_sung*
+
+# General SSH key patterns
+*.pem
+*.key
+*.pub
+*_rsa*
+*_dsa*
+*_ed25519*
+*.priv
+ssh/
+keys/
+id_rsa*
+id_dsa*
+id_ed25519*
