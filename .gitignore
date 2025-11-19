@@ -17,3 +17,8 @@ keys/
 id_rsa*
 id_dsa*
 id_ed25519*
+
+#vscode 
+.vscode/launch.json
+# Or to ignore all VSCode settings:
+.vscode/
